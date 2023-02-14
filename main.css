@@ -1,42 +1,50 @@
-* {
-    margin: 0;
+*{
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
-    font-family: sans-serif;
 }
 
-body {
+body{
+    padding-top: 250px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
-.container {
-    margin: 80px auto;
-    max-width: 640px;
-    width: 100%;
+#container{
+    text-align: center;
+    width: 500px;
 }
 
-form {
-    margin-top: 40px;
+#container div input{
+    width: 250px;
+    padding: 5px 5px;
 }
 
-input, textarea, button {
-    display: block;
-    padding: 8px;
-    margin-bottom: 8px;
-    width: 100%;
-    resize: none;
-}
-
-button {
-    background-color: #2c1698;
-    border: none;
-    text-transform: uppercase;
-    color: #fff;
-    font-weight: bold;
-    font-size: 18px;
-    font-style: italic;
+#container div button{
+    width: 100px;
+    padding: 5px 5px;
     cursor: pointer;
 }
 
-button:hover {
-    background-color: #5e6be3;
+#container h1{
+    padding: 20px 10px;
+}
+
+#container ul{
+    list-style: none;
+    padding: 20px 0;
+}
+
+#container ul li {
+    font-size: 20px;
+    cursor: pointer;
+    padding: 5px;
+    margin: 5px;
+    border-radius: 10px;
+    color: #000;
+}
+
+.feito{
+    text-decoration: line-through;
 }

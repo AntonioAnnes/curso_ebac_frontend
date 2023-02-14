@@ -1,28 +1,23 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Posso comprar ou não?</title>
-    <link rel="stylesheet" href="./main.css" />
+    <link rel="stylesheet" href="main.css">
+    <title>Lista de Tarefas</title>
 </head>
 <body>
-    <div class="container">
-        <h1>Posso Fazer essa Compra?</h1>
-        <h2>Vamos consultar!</h2>
-        <form id="form-valida">
-            <label for="A">Valor da Compra: </label>
-            <input type="number" id="valor-compra" required placeholder="Insira o Valor da Compra">
-            <label for="B">Saldo da Conta: </label>
-            <input type="number" id="saldo-conta" required placeholder="Insira o Saldo da sua Conta">
-            <p class="error-message">
-                O valor do seu Saldo deve ser maior que o valor da Compra.
-            </p>
-            <button type="submit">Consultar</button>
-        </form>
-        <p class="sucess-message">Parabéns! Pode comprar.</p>
+    <div id="container">
+        <h1>Lista de Tarefas</h1>
+        <div>
+            <input type="text" placeholder="Nome da Tarefa" id="nomeTarefa">
+            <button class="cadastra">Cadastrar</button>
+        </div>
+        <ul>
+        </ul>
     </div>
-    <script src="/main.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+    <script src="main.js"></script>
 </body>
 </html>
