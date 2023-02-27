@@ -1,29 +1,38 @@
-const form = document.getElementById('form-valida');
-let valorA = parseFloat(document.getElementById('valor-compra').value)
-let valorB = parseFloat(document.getElementById('saldo-conta').value)
+$(document).ready(function() {
 
-formEvalido = false;
-
-function numerovalida (valorA, valorB){
-    return valorB > valorA
-}
-
-form.addEventListener('submit', function(e){
-
-    e.preventDefault();
-    const mensagemSucesso = `Conta feita com sucesso!`;
-
-    formEvalido = numerovalida(valor-compra.value, saldo-conta.value);
-    if (formEvalido) {
-        const containerMensagemSucesso = document.querySelector('sucess-message')
-        containerMensagemSucesso.innerHTML = mensagemSucesso;
-        containerMensagemSucesso.style.display = 'block'
-
-        valorA.value = '';
-        valorB.value = '';
-
-    }
-    else {
-        document.querySelector('.error-message').style.display = 'block'
-    }
+    $('#cpf').mask('000.000.000-00')
+    $('#cep').mask('(00000-000')
+    
+    $('form').validate({
+        rules: {
+            nome: {
+                required: true
+            },
+            email: {
+                required: true,
+                email: true
+            },
+            cpf: {
+                required:true
+            },
+            cep: {
+                required:true
+            },
+            enderecoCompleto: {
+                required: true,
+            }
+        },
+        messages: {
+            nome: 'Por favor, escreva seu nome'
+        },
+        submitHandler: function(form) {
+            console.log(form)
+        },
+        invalidHandler: function(evento, validador) {
+            let camposIncorretos = validador.numberOfInvalids();
+            if (camposIncorretos) {
+                alert(`Existem ${camposIncorretos} campos incorretos`)
+            }
+        }
+    })
 })
